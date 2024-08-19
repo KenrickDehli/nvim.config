@@ -97,6 +97,9 @@ vim.opt.guicursor = ''
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
 vim.opt.termguicolors = true
 
 --highlighting on search
