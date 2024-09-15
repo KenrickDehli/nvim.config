@@ -99,6 +99,9 @@ vim.opt.guicursor = ''
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
 vim.opt.termguicolors = true
 
 --highlighting on search
@@ -298,15 +301,19 @@ require('lazy').setup({
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
-      require('which-key').setup()
-
-      -- Document existing key chains
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+      local wk = require 'which-key'
+      wk.setup()
+      wk.add {
+        { '<leader>c', group = '[C]ode' },
+        { '<leader>c_', hidden = true },
+        { '<leader>d', group = '[D]ocument' },
+        { '<leader>d_', hidden = true },
+        { '<leader>r', group = '[R]ename' },
+        { '<leader>r_', hidden = true },
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>s_', hidden = true },
+        { '<leader>w', group = '[W]orkspace' },
+        { '<leader>w_', hidden = true },
       }
     end,
   },
@@ -824,6 +831,7 @@ require('lazy').setup({
     --'folke/tokyonight.nvim',
     --'rebelot/kanagawa.nvim',
     'ellisonleao/gruvbox.nvim',
+    --'olimorris/onedarkpro.nvim',
     --'sainnhe/gruvbox-material',
     --'navarasu/onedark.nvim',
     --'catppuccin/nvim',
@@ -846,7 +854,7 @@ require('lazy').setup({
       --vim.cmd.colorscheme 'github_dark'
       --vim.cmd.colorscheme 'rose-pine-moon'
       --vim.cmd.colorscheme 'kanagawa'
-      --vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'onedark'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
