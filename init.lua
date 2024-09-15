@@ -90,8 +90,10 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<leader>jk', vim.cmd.Ex)
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 --basic linenumbers and cursor
 vim.opt.guicursor = ''
 vim.opt.nu = true
@@ -821,11 +823,11 @@ require('lazy').setup({
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     --'folke/tokyonight.nvim',
     --'rebelot/kanagawa.nvim',
-    --'ellisonleao/gruvbox.nvim',
-    --'navarasu/onedark.nvim',
+    'ellisonleao/gruvbox.nvim',
     --'sainnhe/gruvbox-material',
+    --'navarasu/onedark.nvim',
     --'catppuccin/nvim',
-    'neanias/everforest-nvim',
+    --'neanias/everforest-nvim',
     --'projekt0n/github-nvim-theme',
     --'rose-pine/neovim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
@@ -835,10 +837,11 @@ require('lazy').setup({
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       -- vim.cmd.colorscheme 'tokyonight-moon'
       --vim.cmd.colorscheme 'gruvbox-material'
-      --vim.cmd.colorscheme 'gruvbox'
+      --vim.o.background = 'light'
+      vim.cmd.colorscheme 'gruvbox'
       --vim.cmd.colorscheme 'catppuccin-frappe'
       --vim.cmd.colorscheme 'catppuccin-mocha'
-      vim.cmd.colorscheme 'everforest'
+      --vim.cmd.colorscheme 'everforest'
       --vim.cmd.colorscheme 'github_dark_default'
       --vim.cmd.colorscheme 'github_dark'
       --vim.cmd.colorscheme 'rose-pine-moon'
