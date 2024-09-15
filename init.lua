@@ -98,10 +98,6 @@ vim.g.have_nerd_font = true
 vim.opt.guicursor = ''
 vim.opt.nu = true
 vim.opt.relativenumber = true
-
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-
 vim.opt.termguicolors = true
 
 --highlighting on search
@@ -854,7 +850,7 @@ require('lazy').setup({
       --vim.cmd.colorscheme 'github_dark'
       --vim.cmd.colorscheme 'rose-pine-moon'
       --vim.cmd.colorscheme 'kanagawa'
-      vim.cmd.colorscheme 'onedark'
+      --vim.cmd.colorscheme 'onedark'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
