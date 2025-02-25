@@ -835,6 +835,7 @@ require('lazy').setup({
     --'neanias/everforest-nvim',
     --'projekt0n/github-nvim-theme',
     --'rose-pine/neovim',
+    --'navarasu/onedark.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
@@ -848,10 +849,21 @@ require('lazy').setup({
       --vim.cmd.colorscheme 'everforest'
       --vim.cmd.colorscheme 'github_dark_default'
       --vim.cmd.colorscheme 'github_dark'
+      --require('rose-pine').setup {
+      --  styles = {
+      --    italic = false,
+      --    transparency = true,
+      --  },
+      --}
       --vim.cmd.colorscheme 'rose-pine-moon'
       --vim.cmd.colorscheme 'kanagawa'
-      vim.cmd.colorscheme 'onedark'
+      require('onedarkpro').setup {
+        colors = {
+          red = '#56b6c2',
+        },
+      }
 
+      vim.cmd.colorscheme 'onedark'
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
