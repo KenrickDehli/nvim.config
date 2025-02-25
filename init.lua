@@ -861,6 +861,12 @@ require('lazy').setup({
         colors = {
           red = '#56b6c2',
         },
+        highlights = {
+          ['DiagnosticUnderlineError'] = {
+            fg = '#e06c75',
+            undercurl = true,
+          },
+        },
       }
 
       vim.cmd.colorscheme 'onedark'
