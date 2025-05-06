@@ -829,9 +829,9 @@ require('lazy').setup({
     --'folke/tokyonight.nvim',
     --'rebelot/kanagawa.nvim',
     --'ellisonleao/gruvbox.nvim',
-    'olimorris/onedarkpro.nvim',
+    --'olimorris/onedarkpro.nvim',
     --'sainnhe/gruvbox-material',
-    --'catppuccin/nvim',
+    'catppuccin/nvim',
     --'neanias/everforest-nvim',
     --'projekt0n/github-nvim-theme',
     --'rose-pine/neovim',
@@ -844,7 +844,7 @@ require('lazy').setup({
       -- vim.cmd.colorscheme 'tokyonight-moon'
       --vim.cmd.colorscheme 'gruvbox-material'
       --vim.cmd.colorscheme 'gruvbox'
-      --vim.cmd.colorscheme 'catppuccin-frappe'
+      vim.cmd.colorscheme 'catppuccin-frappe'
       --vim.cmd.colorscheme 'catppuccin-mocha'
       --vim.cmd.colorscheme 'everforest'
       --vim.cmd.colorscheme 'github_dark_default'
@@ -857,19 +857,19 @@ require('lazy').setup({
       --}
       --vim.cmd.colorscheme 'rose-pine-moon'
       --vim.cmd.colorscheme 'kanagawa'
-      require('onedarkpro').setup {
-        colors = {
-          red = '#56b6c2',
-        },
-        highlights = {
-          ['DiagnosticUnderlineError'] = {
-            fg = '#e06c75',
-            undercurl = true,
-          },
-        },
-      }
+      --require('onedarkpro').setup {
+      --  colors = {
+      --    red = '#56b6c2',
+      --  },
+      --  highlights = {
+      --    ['DiagnosticUnderlineError'] = {
+      --      fg = '#e06c75',
+      --      undercurl = true,
+      --    },
+      --  },
+      --}
 
-      vim.cmd.colorscheme 'onedark'
+      --vim.cmd.colorscheme 'onedark'
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
